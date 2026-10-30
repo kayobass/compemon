@@ -110,7 +110,10 @@ with left_column:
     st.pyplot(plot_attribute_chart(pokemons, colours))
 
 with right_column:
-    st.pyplot(plot_radar_chart(pokemons, colours))
+    st.plotly_chart(
+        plot_radar_chart(pokemons, colours),
+        width='stretch',
+    )
 
 st.divider()
 
